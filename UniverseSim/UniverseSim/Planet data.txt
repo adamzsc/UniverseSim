@@ -1,0 +1,16 @@
+Sun = Planet(1.989 * 10**30,696340000,0,0)
+Mercury = Planet(3.285 * 10**23,2439700,57909227000,47879)
+Venus = Planet(4.867 * 10**24,6051800,108209475000,35025)
+Earth = Planet(5.972 * 10**24,6371000,149597870000,29789)
+Mars = Planet(6.39 * 10**23,3389500,227900000000,24135)
+Jupiter = Planet(1.898 * 10**27,69911000,778340821000,13060)
+Saturn = Planet(5.683 * 10**26,60268000,1426666422000,9646)
+Uranus = Planet(8.681 * 10**25,25362000,2870658186000,6800)
+Neptune = Planet(1.024 * 10**26,240622000,4498396441000,5432)
+
+def generatePos(self):
+        angle = math.radians(random.randint(0,360))
+        self.x = self.orbit_radius * math.cos(angle)
+        self.y = self.orbit_radius * math.sin(angle)
+        self.Vx = self.velocity * math.sin(angle)
+        self.Vy = self.velocity * math.cos(angle) * -1
